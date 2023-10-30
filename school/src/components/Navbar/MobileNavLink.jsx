@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-scroll';
 
 
-const MobileNavLink = ({link, href}) => {
+const MobileNavLink = ({setToggle, link, href}) => {
 
   return (
 
@@ -10,7 +10,7 @@ const MobileNavLink = ({link, href}) => {
 
 <Link to={href} spy={true} smooth={true} duration={500} offset={-50} 
 
-className='font-bold transition-all duration-300'>
+className='font-bold transition-all duration-300' onClick={(prev) => setToggle(!prev)}>
 
 {link}
 

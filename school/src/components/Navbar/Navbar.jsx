@@ -30,7 +30,7 @@ const Navbar = () => {
         <div className='fixed h-full w-96 top-0 left-0 z-20 bg-Teal text-white 
         flex flex-col justify-center items-center shadow-lg gap-8 py-8'>
         {navLinks.map((navLink) => {
-          return <MobileNavLink key={navLink.id} {...navLink} />;
+          return <MobileNavLink key={navLink.id} {...navLink} setToggle={setToggle}/>;
         })}
         <HiX className='absolute right-12 top-12 text-3xl cursor pointer'
           onClick={(prev) => setToggle(!prev)}
