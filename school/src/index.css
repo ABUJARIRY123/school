@@ -10,5 +10,5 @@ img {
 };
 
 .section {
-  @apply container mx-auto py-24 px-6;
+  @apply container mx-auto py-24 px-6 min-h-screen;
 };

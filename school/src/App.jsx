@@ -1,5 +1,5 @@
 import React from 'react';
-import {Navbar, Home, About, Teacher, Programs, Contact, Footer} from './components/index';
+import {Navbar, Home, About, Teachers, Programs, Contact, Footer} from './components/index';
 
 function App() {
 
@@ -8,8 +8,8 @@ function App() {
   <Navbar/>
   <Home/>
   <About/>
-  <Teacher/>
   <Programs/>
+  <Teachers/>
   <Contact/>
   <Footer/>
   
