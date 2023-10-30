@@ -1,16 +1,25 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import NavLink from './NavLink'
-import { navLinks } from '../../../Data'
+import { navLinks } from '../../Data'
 import {HiMenu, HiX} from 'react-icons/hi'
 import MobileNavLink from './MobileNavLink'
 
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const [active, setActive] = useState(null);
+  useEffect(() => {
+    const scrollActive = () => {
+      setActive(window.scroll > 20);
+    };
+    window.addEventListener("scroll", scrollActive);
+    return () => window.removeEventListener("scroll", scrollActive);
+  },[active]);
   return (
-    <div className='fixed w-full top-0 left-0 z-20'>
+    <div className={`${active ? "shadow-lg bg-Solitude": ""} fixed w-full top-0 left-0 z-20`}>
     <div>
-      <div  className='container py-4 mx-auto flex items-center justify-between px-2'                                                >
+      <div  className={`${active ? "py-2 transition-all duration-300":"py-4"} 
+      container mx-auto flex items-center justify-between px-2`}>                                                >
 <div className='flex items-center gap-5'>
   <HiMenu className='text-3xl sm:hidden cursor-pointer' onClick={() => setToggle(true)}/>
         <div className='text-xl text-Teal Uppercase tracking-wide font-bold'>

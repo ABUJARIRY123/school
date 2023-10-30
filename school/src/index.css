@@ -7,8 +7,12 @@
 
 img {
   @apply w-full;
-};
+}
 
 .section {
   @apply container mx-auto py-24 px-6 min-h-screen;
-};
+}
+
+.animate-slide:hover{
+  animation-play-state:paused;
+}

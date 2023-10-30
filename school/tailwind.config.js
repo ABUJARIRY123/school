@@ -11,7 +11,7 @@ module.exports = {
         Teal:"#2F6C6D",
         HummingBird: "#d1f1ee",
         yellow: "#e4d63b",
-        Solitude: "#87CEEB",
+        Solitude: "violet",
         gray: "#4B4B4C"
       },
       animation: {
@@ -19,11 +19,10 @@ module.exports = {
       },
       keyframes: {
         slide: {
-          "0%, 100%": "translateX(5%)",
+          "0%, 100%": {transform: "translateX(5%)"},
           "50%": {transform: "translateX(-120%)"}
         }
       }
-    }
   },
   screens: {
     xs: "480px",
@@ -32,3 +31,4 @@ module.exports = {
   },
   plugins: [],
 }                              
+}
