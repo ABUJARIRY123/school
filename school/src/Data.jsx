@@ -81,6 +81,8 @@ export const categories = [
     category: "Cloud Computing",
   },
 ];
+
+//these are several events conducted at school
 export const programs = [
   {
     id: 1,
@@ -156,3 +158,21 @@ export const programs = [
   },
 ];
 
+export const faqs = [
+  {
+    id: 1,
+    title: "What is Skillex?",
+  },
+  {
+    id: 2,
+    title: "What can I learn from Skillex?",
+  },
+  {
+    id: 3,
+    title: "Can I teach on Skillex?",
+  },
+  {
+    id: 4,
+    title: "What is included in my Skillex membership?",
+  },
+];
