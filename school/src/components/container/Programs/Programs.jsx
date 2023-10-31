@@ -3,8 +3,23 @@ import {categories} from '../../../Data'
 import {programs} from '../../../Data'
 import Categories from './Categories';
 import Program from './Program';
+import { motion } from 'framer-motion';
 
 const Programs = () => {
+  const container = {
+    hidden: {
+      opacity:0,
+      scale:0,
+    },
+    visible: {
+    opacity:1,
+    scale:1,
+    transition:{
+      delayChildren: 0.2,
+      staggerChildren: 0.4,
+    },
+    },
+  };
   return (
     <div className='section' id='programs'>
     <div className='text-center'>
@@ -18,11 +33,15 @@ const Programs = () => {
  from early years, special needs, primary, secondary and A-Levels
 </p>
   </div>
-      <div className='grid md:grid-cols-5 sm:grid-cols-2 mt-12 gap-8'>
+      <motion.div 
+      variants={container}
+      initial='hidden'
+      whileInView='visible'
+      className='grid md:grid-cols-5 sm:grid-cols-2 mt-12 gap-8'>
         {categories.map(category => {
           return <Categories key={category.id} {...category}/>;
         })}
-      </div>
+      </motion.div>
       <div className='text-xl font-bold mt-32'>
       Description of just a few of activities conducted at school
       </div>
