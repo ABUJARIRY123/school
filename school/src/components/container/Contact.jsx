@@ -13,11 +13,16 @@ flex flex-col items-left gap-4'>
     minLength='3' maxLength='60' placeholder='Your Subject' className='w-full text balck text-0.7xl
     sm:text-0.5xl p-1 rounded-x1 border border-solid border-slate-900'
   />
+  <label htmlFor="subject" > Email: </label>
+  <input type='email' id='email' name='email' required
+    minLength='3' maxLength='60' placeholder='Your Email' className='w-full text balck text-0.7xl
+    sm:text-0.5xl p-1 rounded-x1 border border-solid border-slate-900'
+  />
   <label htmlFor='message'> Message: </label>
   <textarea name='message' id='message' cols='8' rows='4' placeholder='Your Message' required
   className='w-full text balck text-1xl
     sm:text-0.8xl p-3 rounded-x1 border border-solid border-slate-900'></textarea>
-    <button className='bg-Teal-700 hover:bg:Teal-600 active:bg-Teal-500 text-white text-0.8xl
+    <button className='bg-Teal-700 hover:bg:Teal-600 active:bg-Teal-500 text-black text-0.8xl
     p-1 w-28 rounded-xl border border-solid border-slate-900'>Submit</button>
 </form>
     </section>

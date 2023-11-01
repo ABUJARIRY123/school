@@ -4,14 +4,14 @@ import {FaLaptopCode} from 'react-icons/fa'
 import {BsBarChartLine} from "react-icons/bs"
 import {MdOutlineScience} from 'react-icons/md'
 
-import courses1 from './assets/courses1.jpg'
-import courses2 from './assets/courses2.jpg'
-import courses3 from './assets/courses3.jpg'
-import courses4 from './assets/courses4.jpg'
-import courses5 from './assets/courses5.jpg'
-import courses6 from './assets/courses6.jpg'
-import courses7 from './assets/courses7.jpg'
-import courses8 from './assets/courses8.jpg'
+import event1 from './assets/event1.jpg'
+import event2 from './assets/event2.jpg'
+import event3 from './assets/event3.jpg'
+import event4 from './assets/event4.jpg'
+import event5 from './assets/event5.jpg'
+import event6 from './assets/event6.jpg'
+import event7 from './assets/event7.jpg'
+import event8 from './assets/event8.jpg'
 
 import logo1 from './assets/logo1.png'
 import logo2 from './assets/logo2.png'
@@ -58,27 +58,32 @@ export const categories = [
   {
     id: 1,
     icon: <FiPenTool/>,
-    category: "Design",
+    category: "Early Years",
   },
    {
     id: 2,
     icon: <FaLaptopCode/>,
-    category: "Development",
+    category: "Special Needs",
   },
    {
     id: 3,
     icon: <BsBarChartLine/>,
-    category: "Business",
+    category: "Cambridge Primary",
   },
    {
     id: 4,
     icon: <MdOutlineScience/>,
-    category: "Science",
+    category: "Cambridge Secondary",
   },
 {
     id: 5,
     icon: <MdOutlineScience/>,
-    category: "Cloud Computing",
+    category: "A- Levels",
+  },
+   {
+    id: 6,
+    icon: <BsBarChartLine/>,
+    category: "Islamiyaat",
   },
 ];
 
@@ -86,93 +91,86 @@ export const categories = [
 export const programs = [
   {
     id: 1,
-    image: courses1,
-    category: "Web Design",
-    title: "The Complete Web Design Course",
+    image: event1,
+    category: "Science Fair Day",
+    title: "A student presenting his idea during science fair",
     rating: 4.9,
-    participants: 500,
-    price: 105,
+    participants: 902,
   },
   {
     id: 2,
-    image: courses2,
-    category: "Web Development",
-    title: "FullStack Web Development Course",
+    image: event2,
+    category: "Ventilator",
+    title: "Science studnets designed a ventilator in response to Covid-19",
     rating: 4.8,
-    participants: 700,
-    price: 125,
+    participants: 80,
   },
   {
     id: 3,
-    image: courses3,
-    category: "Web Development",
-    title: "Python Beginner to Advanced Course",
+    image: event3,
+    category: "Football Team",
+    title: "Our Football Team pausing for a photo after winning a match",
     rating: 4.9,
-    participants: 300,
+    participants: 30,
     price: 99,
   },
   {
     id: 4,
-    image: courses4,
-    category: "Web Design",
-    title: "UI/UX Design Crazy Course With Harrys",
+    image: event4,
+    category: "Early Year",
+    title: "Miss Ruth talking to parents about the exemplory performance of Early Years",
     rating: 4.7,
     participants: 600,
-    price: 85,
   },
   {
     id: 5,
-    image: courses5,
-    category: "AI Development",
-    title: "AI Development With Python (complete beginner course)",
+    image: event5,
+    category: "Games Time",
+    title: "Miss Safia nad students skipping a rop during games time",
     rating: 4.9,
-    participants: 500,
-    price: 105,
+    participants: 54,
   },
   {
     id: 6,
-    image: courses6,
-    category: "Web Design",
-    title: "The Complete Web Design Course",
+    image: event6,
+    category: "Mentorship",
+    title: "Teachers attending a mentorship session organised at school",
     rating: 4.9,
     participants: 500,
-    price: 105,
   },
   {
     id: 7,
-    image: courses7,
-    category: "Web Design",
-    title: "The Complete Web Design Course",
+    image: event7,
+    category: "Certification",
+    title: "Students receiving their certificates",
     rating: 4.9,
-    participants: 500,
-    price: 105,
+    participants: 30,
   },
   {
     id: 8,
-    image: courses8,
-    category: "Web Design",
-    title: "The Complete Web Design Course",
+    image: event8,
+    category: "Sketting",
+    title: "Our sketting champions pausing for a photo",
     rating: 4.9,
-    participants: 500,
-    price: 105,
+    participants: 15,
   },
 ];
 
 export const faqs = [
   {
     id: 1,
-    title: "What is Skillex?",
+    title: "What is Manarat International School Of Kenya?",
   },
   {
     id: 2,
-    title: "What can I learn from Skillex?",
+    title: "What can I learn from Manarat?",
   },
   {
     id: 3,
-    title: "Can I teach on Skillex?",
+    title: "Can I teach at Manarat?",
   },
   {
     id: 4,
-    title: "What is included in my Skillex membership?",
+    title: "What are categories of programs offered at Manarat International School of Kenya?",
   },
 ];
