@@ -27,7 +27,7 @@ const Home = () => {
       <div>
 <div className='font-bold text-xs text-Teal mb-4'>
   {""}
-  Your Best Online Classes masters
+  Your Best Cambridge Carriculum
 </div>
 <div className='sm:text-[2.5 rem] text-[1.9rem] font-bold'>
   This is where <br/> talents get natured <br/> by well experienced experts
