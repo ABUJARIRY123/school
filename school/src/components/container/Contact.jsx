@@ -3,13 +3,15 @@ import emailjs from '@emailjs/browser';
 import {motion} from 'framer-motion'
 
 const Contact = () => {
-  const form = useRef()
+  const contactform = useRef()
+  const newsletterform = useRef(); 
    const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_vmaklnl', 'template_ui6xmwe', form.current, 'ZtwfZE-s4hDF7B71R')
+    emailjs.sendForm('service_vmaklnl', 'template_ui6xmwe', contactform.current, 'ZtwfZE-s4hDF7B71R')
       .then((result) => {
           console.log(result.text);
+            window.alert('Thank You for Your Submission');
       }, (error) => {
           console.log(error.text);
       });
@@ -18,9 +20,10 @@ const Contact = () => {
    const sendNews = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_vmaklnl', 'template_ui6xmwe', form.current, 'ZtwfZE-s4hDF7B71R')
+    emailjs.sendForm('service_vmaklnl', 'template_e98hhff', newsletterform.current, 'ZtwfZE-s4hDF7B71R')
       .then((result) => {
           console.log(result.text);
+            window.alert('Thank You for subscribing to Our Newsletter');
       }, (error) => {
           console.log(error.text);
       });
@@ -30,7 +33,7 @@ const Contact = () => {
     <div className='section' id='contact'>
     <section id="contact" className='p-6 my-12 scroll-mt-16'>
 <h3 className='text-2xl font-bold text-center sm:text-2xl mb-2'>Contact Us</h3>
-<form ref={form} action='' method="post" onSubmit={sendEmail} className='max-w-2xl mx-auto text-bold sm:text-bold
+<form ref={contactform} action='' method="post" onSubmit={sendEmail} className='max-w-2xl mx-auto text-bold sm:text-bold
 flex flex-col items-left gap-4'>
   <label htmlFor="subject" > Subject: </label>
   <input type='text' id='subject' name='subject' required
@@ -48,7 +51,7 @@ flex flex-col items-left gap-4'>
     sm:text-0.5xl p-1 rounded-x1 border border-solid border-slate-900'
   />
   <label htmlFor='message'> Message: </label>
-  <textarea name='message' id='message' cols='8' rows='4' placeholder='Your Message' required
+  <textarea name='message' id='message' cols='8' rows='5' placeholder='Your Message' required
   className='w-full text-balck text-1xl
     sm:text-0.8xl p-1 rounded-x1 border border-solid border-slate-900'>
     </textarea>
@@ -66,12 +69,13 @@ Subscribe to Our Newsletter
   inspire each child to achieve greatness in their own way
 </p>
 
-<motion.form ref={form} action='' method="post" onSubmit={sendNews} initial={{scale:0}} whileInView={{scale:1}}  
+<motion.form ref={newsletterform} action='' method="post" onSubmit={sendNews} initial={{scale:0}} whileInView={{scale:1}}  
 transition={{duration:0.4}} className='mt-5'>
-  <input type='email' placeholder='Enter Your Email Address'className='sm:p-3 p-2 outline-none
+  <input type='email' name='email' placeholder='Enter Your Email Address' className='sm:p-3 p-2 outline-none
   text-sm shadow-md sm:w-72 w-60'/>
-  <button className='text-sm text-white bg-Teal sm:p-3 p-2 shadow-md'>Subscribe</button>
+  <button type="submit" className='text-sm text-white bg-Teal sm:p-3 p-2 shadow-md'>Subscribe</button>
 </motion.form>
+
     </div>
     </div>
   );

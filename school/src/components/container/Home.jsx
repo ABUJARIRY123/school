@@ -3,6 +3,7 @@ import hero from '../../assets/hero.png'
 import Homes from './Programs/Homes'
 import {logos} from '../../Data'
 import{motion} from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
  const container = {
@@ -46,12 +47,12 @@ const item = {
   We nature talents in various languages, swahili
 </p>
 <div className='mt-6'>
-  <button className='px-6 py-3 font-bold text-white bg-Teal rounded-lg mr-4 text-sm'>
-Join Us Today
+  <button className="px-6 py-3 font-bold text-white bg-Teal rounded-lg mr-4 text-sm">
+    Join Us Today
   </button>
-    <button className='px-6 py-3 font-bold border border-solid border-gray rounded-lg text-sm'>
-Discover More
-    </button>
+  <button className="px-6 py-3 font-bold border border-solid border-gray rounded-lg text-sm">
+    Discover More
+  </button>
 </div>
       </div>
       <div className='md:w-[60%] '>
