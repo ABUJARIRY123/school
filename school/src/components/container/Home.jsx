@@ -1,7 +1,9 @@
 import React from 'react'
 import hero from '../../assets/hero.png'
+import Homes from './Programs/Homes'
 import {logos} from '../../Data'
 import{motion} from 'framer-motion'
+
 const Home = () => {
  const container = {
   hidden: {
@@ -52,25 +54,28 @@ Discover More
     </button>
 </div>
       </div>
-      <div className='md:w-[60%]'>
+      <div className='md:w-[60%] '>
+      <div className='border-[4px] border-solid border-Teal rounded-lg'>
         <img src={hero} alt="" />
       </div>
-    </div>
-    <div>
-      <p className='text-center text-xl'>
-        Out of the experties we offer, Our graduates have now managed
-        to join <span className='text-Teal'>100+ different carrers in the world</span>
-      </p>
-     <motion.div variants={container} initial="hidden" whileInView="visible" className='flex items-center justify-center flex-wrap gap-8 p-2'>
-  {logos.map((logo, index) => (
-    <motion.div variants={item} className='w-28' key={index}>
-      <img src={logo} alt='' className='w-full object-cover' />
-    </motion.div>
-  ))}
-</motion.div>
-    </div>
-    </div>
-  )
-}
+            </div>
 
+    </div>
+    <div className='text-center'>
+
+    <div className='text-xl font-bold mt-32'>
+      Some of the experties that our learners gain at school
+      </div>
+  <div className='mt-12 overflow-x-hidden w-full relative'>
+      <div className='flex gap-8 md:w-full sm:w-[170%] xs:w-[340%] w-[480%] animate-slide'>
+{logos.map(logo =>{
+  return <Homes key={logo.id} {...logo}/>;
+})}
+      </div>
+    </div>
+        </div>
+        </div>
+        
+);
+  };
 export default Home

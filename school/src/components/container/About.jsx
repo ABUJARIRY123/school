@@ -16,6 +16,16 @@ Educational services from early years to A-levels</span>
   We have  a team of experienced teachers that are well versed in their areas of specialization
   We offer practical oriented education 
 </p>
+<h2>Mission</h2>
+<p className='text-sm text-gray leading-7 mb-4'>
+  We have  a team of experienced teachers that are well versed in their areas of specialization
+  We offer practical oriented education 
+</p>
+<h2>Vision</h2>
+<p className='text-sm text-gray leading-7 mb-4'>
+  We have  a team of experienced teachers that are well versed in their areas of specialization
+  We offer practical oriented education 
+</p>
 <button className='py-3 px-6 text-sm border border-solid border-gray rounded-lg font-bold'>
 Know More
 </button>

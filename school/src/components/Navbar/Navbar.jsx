@@ -23,8 +23,9 @@ const Navbar = () => {
       container mx-auto flex items-center justify-between px-2`}>
 <div className='flex items-center gap-5'>
   <HiMenu className='text-3xl sm:hidden cursor-pointer ' onClick={() => setToggle(true)} />
+    <img src="/logo.png" alt="Logo" className="h-12 w-auto" /> {/* Add this line */}
         <div className='text-xl text-black Uppercase tracking-wide font-bold'>
-          Home of Talents 
+Manarat International <br/>School of Kenya
         </div>
        </div>
        <div className='sm:flex items-center hidden'>
