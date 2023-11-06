@@ -2,9 +2,11 @@ import React from "react";
 import {
   BsFacebook,
   BsInstagram,
-  BsTwitter,
   BsWhatsapp,
+  BsEnvelope
 } from "react-icons/bs";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { motion } from "framer-motion";
 
 const Footer = () => {
@@ -72,17 +74,20 @@ Privacy Policy
           <div className="text-sm mb-4">manarat.misk@gmail.com</div>
           <div className="text-sm">+254795058718</div>
           <div className="flex gap-4 mt-4">
-            <a href="" className="hover:scale-110 text-xl">
+            <a href="https://www.facebook.com/ManaratKenya/" className="hover:scale-110 text-xl">
               <BsFacebook />
             </a>
-            <a href="" className="hover:scale-110 text-xl">
+            <a href="https://www.instagram.com/misk.manarat/" className="hover:scale-110 text-xl">
               <BsInstagram />
             </a>
-            <a href="" className="hover:scale-110 text-xl">
-              <BsTwitter />
+            <a href="https://twitter.com/manarat_misk" className="hover:scale-110 text-xl">
+<FontAwesomeIcon icon={faXTwitter} />
             </a>
-            <a href="" className="hover:scale-110 text-xl">
+            <a href="https://wa.me/254795058718" className="hover:scale-110 text-xl">
               <BsWhatsapp />
+            </a>
+             <a href="mailto:manarat.misk@gmail.com" className="hover:scale-110 text-xl">
+              <BsEnvelope />
             </a>
           </div>
         </div>

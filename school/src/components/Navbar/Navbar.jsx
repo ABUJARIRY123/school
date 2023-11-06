@@ -4,7 +4,14 @@ import { navLinks } from '../../Data'
 import {HiMenu, HiX} from 'react-icons/hi'
 import MobileNavLink from './MobileNavLink'
 import { motion } from 'framer-motion';
-
+import {
+  BsFacebook,
+  BsInstagram,
+  BsWhatsapp,
+  BsEnvelope
+} from "react-icons/bs";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -34,9 +41,25 @@ Manarat International <br/>School of Kenya
         })}
         
        </div>
-       <button className='py-3 px-6 font-bold text-sm border border-solid rounded-lg border-yellow'>
-        Sign Up
-       </button>
+       
+       <div className="flex gap-4 mt-4">
+           <a href="https://www.facebook.com/ManaratKenya/" className="hover:scale-110 text-xl">
+              <BsFacebook />
+            </a>
+            <a href="https://www.instagram.com/misk.manarat/" className="hover:scale-110 text-xl">
+              <BsInstagram />
+            </a>
+            <a href="https://twitter.com/manarat_misk" className="hover:scale-110 text-xl">
+<FontAwesomeIcon icon={faXTwitter} />
+
+            </a>
+            <a href="https://wa.me/254795058718" className="hover:scale-110 text-xl">
+              <BsWhatsapp />
+            </a>
+             <a href="mailto:manarat.misk@gmail.com" className="hover:scale-110 text-xl">
+              <BsEnvelope />
+            </a>
+          </div>
        {toggle && (
         <motion.div 
         initial={{x: -500, opacity:0}}

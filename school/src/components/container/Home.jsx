@@ -56,7 +56,7 @@ const item = {
 </div>
       </div>
       <div className='md:w-[60%] '>
-      <div className='border-[4px] border-solid border-Teal rounded-lg'>
+      <div className='border-[3px] border-solid border-Teal rounded-lg'>
         <img src={hero} alt="" />
       </div>
             </div>
@@ -76,6 +76,7 @@ const item = {
     </div>
         </div>
         </div>
+
         
 );
   };
