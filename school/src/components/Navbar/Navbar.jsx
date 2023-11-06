@@ -10,8 +10,8 @@ import {
   BsWhatsapp,
   BsEnvelope
 } from "react-icons/bs";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
+
+import {FaXTwitter} from "react-icons/fa6"
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -50,7 +50,7 @@ Manarat International <br/>School of Kenya
               <BsInstagram />
             </a>
             <a href="https://twitter.com/manarat_misk" className="hover:scale-110 text-xl">
-<FontAwesomeIcon icon={faXTwitter} />
+<FaXTwitter />
 
             </a>
             <a href="https://wa.me/254795058718" className="hover:scale-110 text-xl">
