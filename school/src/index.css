@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 @tailwind base;
@@ -6,13 +5,40 @@
 @tailwind utilities;
 
 img {
-  @apply w-full;
+  object-fit: cover;
 }
 
 .section {
   @apply container mx-auto py-24 px-6 min-h-screen;
 }
 
-.animate-slide:hover{
-  animation-play-state:paused;
+.animate-slide:hover {
+  animation-play-state: paused;
+}
+
+.desktop,
+.tablet {
+  display: none;
+}
+
+.mobile {
+  display: block;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .tablet {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .desktop,
+  .tablet {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
 }
