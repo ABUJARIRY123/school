@@ -9,25 +9,25 @@ const SlideShow = ({ children: slides }) => {
   const next = () => setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
 
   useEffect(() => {
-    const id = setInterval(next, 3000); // Change slide every 3 seconds
+    const id = setInterval(next, 9000); // Change slide every 3 seconds
     setIntervalId(id);
 
     return () => clearInterval(id); // Clear interval on component unmount
   }, []);
 
   return (
-    <div className="overflow-hidden relative h-screen">
-      <div className="flex transition-transform ease-out duration-1000">
+    <div className="overflow-hidden relative max-h-screen">
+      <div className="flex transition-transform ease-out duration-9000">
         {slides.map((slide, index) => (
           <div
             key={`${slide.id}-${index}`}
             className={`w-full h-full ${
               curr === index ? 'block' : 'hidden'
-            } transition-opacity duration-1000`}
+            } transition-opacity duration-9000`}
           >
             <img
               src={slide.src}
-              className="w-full h-full object-cover transition-transform duration-1000 ease-in-out"
+              className="w-full h-full object-cover transition-transform duration-9000 ease-in-out"
               alt={`slide-${index}`}
             />
           </div>
@@ -36,13 +36,15 @@ const SlideShow = ({ children: slides }) => {
       <div className="absolute inset-0 flex items-center justify-between p-5">
         <button
           onClick={prev}
-          className="p-2 rounded-full shadow bg-white text-gray-800 hover:bg-white md:top-1/2 md:transform md:translate-y-1/2 md:flex hidden"
+          className="p-2 rounded-full shadow bg-white text-gray-800 
+          hover:bg-white md:top-1/2 md:transform md:translate-y-1/2 md:flex hidden"
         >
           <BsChevronLeft size={30} />
         </button>
         <button
           onClick={next}
-          className="p-2 rounded-full shadow bg-white text-gray-800 hover:bg-white md:top-1/2 md:transform md:translate-y-1/2 md:flex hidden"
+          className="p-2 rounded-full shadow bg-white text-gray-800 
+          hover:bg-white md:top-1/2 md:transform md:translate-y-1/2 md:flex hidden"
         >
           <BsChevronRight size={30} />
         </button>

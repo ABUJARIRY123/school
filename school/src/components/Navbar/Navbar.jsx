@@ -18,7 +18,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const scrollActive = () => {
-      setActive(window.scroll > 20);
+      setActive(window.scrollY > 20);
     };
     window.addEventListener("scroll", scrollActive);
     return () => window.removeEventListener("scroll", scrollActive);
@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <div className={`${active ? "shadow-lg bg-Solitude" : ""} fixed w-full top-0 left-0 z-20`}>
-      <div className='bg-Teal p-0.03 '>
+      <div className={`bg-Teal p-0.03 ${isDesktop ? 'py-4' : 'py-2'}`}>
         <div className={`${active ? "py-2 transition-all duration-300" : "py-4"}
           container mx-auto flex items-center justify-between px-2`}>
           <div className='flex items-center gap-5'>
@@ -40,7 +40,6 @@ const Navbar = () => {
             {navLinks.map(navLink => {
               return <NavLink key={navLink.id} {...navLink} />
             })}
-
           </div>
 
           <div className="flex gap-4 mt-4">
@@ -75,7 +74,9 @@ const Navbar = () => {
               />
             </motion.div>
           )}
+
         </div>
+
       </div>
     </div>
   );
